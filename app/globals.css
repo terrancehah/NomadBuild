@@ -1,0 +1,311 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * ─── CUSTOM FONTS ────────────────────────────────────────────────────
+ * 潮字社风云简体 — dramatic Chinese calligraphic display font.
+ * To activate: download from 潮字社官网 (https://www.chaozishe.com)
+ * and place at /public/fonts/fengyun.woff2 (+ fengyun.ttf optional).
+ * The brand name in the header renders in 风云简体 once the file is present.
+ */
+@font-face {
+	font-family: "FengYun";
+	src: url("/font/ChaoZiSheFengYunJian-2.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+	/* ─── POSTER-FRAME CSS PRIMITIVES ─────────────────────────────────── */
+	/* EASY CUSTOMIZATION: brand color tokens (RGB channels for alpha compositing). */
+	--color-primary: 14 165 233;
+	--color-secondary: 217 70 239;
+	--color-accent: 249 115 22;
+
+	/* Layout tokens */
+	--section-padding: 5rem 1rem;
+	--container-max-width: 1280px;
+}
+
+@layer base {
+	* {
+		@apply border-gray-200 dark:border-gray-800;
+	}
+
+	html {
+		/* Hint the UA about both color schemes so form controls & scrollbars follow. */
+		color-scheme: light dark;
+	}
+
+	body {
+		/* Body surface flips with the `dark` class on <html>.
+		   The 400ms transition gives a soft crossfade that matches travelrizz. */
+		@apply bg-white text-gray-900 antialiased transition-colors duration-400;
+		@apply dark:bg-gray-900 dark:text-gray-100;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		/* Headings use Noto Sans SC Bold by default; .font-zcool can be opted
+		   in on individual headings that should feel like a poster headline. */
+		font-family:
+			var(--font-noto-sc), "PingFang SC", "Microsoft YaHei", sans-serif;
+		@apply font-bold;
+	}
+
+	h1 {
+		@apply text-4xl md:text-5xl lg:text-6xl;
+	}
+
+	h2 {
+		@apply text-3xl md:text-4xl lg:text-5xl;
+	}
+
+	h3 {
+		@apply text-2xl md:text-3xl;
+	}
+
+	h4 {
+		@apply text-xl md:text-2xl;
+	}
+}
+
+@layer components {
+	/* Responsive max-width wrapper used across every page. */
+	.container-custom {
+		@apply mx-auto px-8 sm:px-10 lg:px-12;
+	}
+
+	/* Vertical rhythm shared by every top-level section. */
+	.section-padding {
+		@apply py-16 md:py-24;
+	}
+
+	/* Primary CTA — unchanged in dark mode because brand color stays vivid. */
+	.btn-primary {
+		@apply bg-primary-500 hover:bg-primary-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+	}
+
+	/* Secondary CTA — outlined; swaps surface to gray-800 in dark mode. */
+	.btn-secondary {
+		@apply bg-white hover:bg-gray-50 text-primary-600 font-semibold px-6 py-3 rounded-lg border-2 border-primary-500 transition-all duration-300;
+		@apply dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-primary-300 dark:border-primary-400;
+	}
+
+	.btn-accent {
+		@apply bg-[#128C7E] hover:bg-[#075E54] dark:bg-[#25D366] dark:hover:bg-[#128C7E] hover:translate-y-1 shadow-lg hover:shadow-xl text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300;
+	}
+
+	/* Card surface — gray-800 fallback in dark mode keeps elevation readable. */
+	.card {
+		@apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden;
+		@apply dark:bg-gray-800 dark:shadow-black/40;
+	}
+
+	/* Form inputs — dark-aware border/background so focus rings stay visible. */
+	.input-field {
+		@apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all;
+		@apply bg-white text-gray-900 placeholder:text-gray-400;
+		@apply dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100 dark:placeholder:text-gray-500;
+	}
+
+	.textarea-field {
+		@apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none;
+		@apply bg-white text-gray-900 placeholder:text-gray-400;
+		@apply dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100 dark:placeholder:text-gray-500;
+	}
+
+	/* Reusable surface tokens so sub-pages don't hard-code bg-gray-50/bg-white. */
+	.surface-muted {
+		@apply bg-gray-50 dark:bg-gray-950 transition-colors duration-400;
+	}
+
+	.surface-base {
+		@apply bg-white dark:bg-gray-900 transition-colors duration-400;
+	}
+
+	.text-muted {
+		@apply text-gray-600 dark:text-gray-300;
+	}
+
+	/* =====================================================================
+	   Poster-moment primitives — echo the social-media poster aesthetic
+	   (red frame + yellow highlight + outlined ZCOOL headline). Use sparingly
+	   on hero / CTA sections so the site still feels clean overall.
+	   ===================================================================== */
+
+	/* Red outer frame around a white inner surface. */
+	.poster-frame {
+		@apply relative rounded-2xl bg-primary-500 p-2 md:p-3 shadow-xl;
+	}
+	.poster-frame-inner {
+		@apply rounded-xl bg-white dark:bg-gray-900 p-6 md:p-10 lg:p-14;
+	}
+
+	/* Bold outlined display headline in the style of 想进步，补育人！ */
+	.poster-headline {
+		/* font-zcool CSS var injected by next/font in layout.tsx */
+		font-family: var(--font-zcool), "PingFang SC", sans-serif;
+		@apply text-primary-500 leading-tight;
+		/* Yellow outline behind the red fill — four offset text-shadows create a
+		   pseudo-stroke without needing the text-stroke tailwind plugin. */
+		text-shadow:
+			-2px -2px 0 #ffd400,
+			2px -2px 0 #ffd400,
+			-2px 2px 0 #ffd400,
+			2px 2px 0 #ffd400,
+			0 6px 0 rgba(31, 54, 93, 0.15);
+	}
+
+	/* Yellow highlight bar that sits behind a phrase (see "育人介绍费" style). */
+	.highlight-bar {
+		@apply relative inline-block px-2;
+	}
+	.highlight-bar::before {
+		content: "";
+		@apply absolute inset-x-0 bottom-1 h-3 md:h-4 bg-accent-400 -z-10 rounded;
+	}
+
+	/* Sticker / tag used for callouts like "先到先得" or "名额有限". */
+	.sticker-tag {
+		@apply inline-block px-3 py-1 rounded-full font-bold text-sm bg-accent-400 text-secondary-500 shadow-md;
+	}
+}
+
+@layer utilities {
+	.text-balance {
+		text-wrap: balance;
+	}
+}
+
+/* ─── SCROLL-FADE ANIMATION ──────────────────────────────────────────────
+ * Viewport entrance animation matching terrancehah.com's style:
+ * elements slide up and fade in when scrolled into view.
+ * Controlled by ScrollFade client component via IntersectionObserver.
+ */
+.scroll-fade {
+	opacity: 0;
+	transform: translateY(28px);
+	transition:
+		opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+		transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+	will-change: opacity, transform;
+}
+
+.scroll-fade.scroll-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* ─── DIRECTIONAL SCROLL-FADE VARIANTS ──────────────────────────────────────
+ * Used for the teacher profile split-panel rows: image panel slides in from
+ * its side (left or right) while the text panel slides in from the other.
+ * Both resolve with .scroll-visible applied by ScrollFade's IntersectionObserver.
+ */
+.scroll-fade-left {
+	opacity: 0;
+	transform: translateX(-60px);
+	transition:
+		opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+		transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+	will-change: opacity, transform;
+}
+
+.scroll-fade-right {
+	opacity: 0;
+	transform: translateX(60px);
+	transition:
+		opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+		transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+	will-change: opacity, transform;
+}
+
+.scroll-fade-left.scroll-visible,
+.scroll-fade-right.scroll-visible {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+/* ─── TEACHER PROFILE CARD ─────────────────────────────────────────────
+ * Dark navy card that wraps each teacher's image circles + text.
+ * A subtle diagonal gradient overlay adds depth reminiscent of
+ * the reference business-card aesthetic.
+ */
+.teacher-card {
+	position: relative;
+	/* border-radius controlled by Tailwind classes on the element
+	   so it can be responsive (rounded on mobile, one-sided on lg). */
+	overflow: hidden;
+	background: linear-gradient(135deg, #101c33 0%, #1a2e4f 50%, #152541 100%);
+	border: 1px solid rgba(79, 112, 179, 0.2);
+	box-shadow:
+		0 4px 30px rgba(31, 54, 93, 0.4),
+		inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Subtle diagonal accent line overlay for visual depth */
+.teacher-card::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background: linear-gradient(
+		135deg,
+		transparent 0%,
+		rgba(79, 112, 179, 0.08) 45%,
+		rgba(79, 112, 179, 0.15) 50%,
+		rgba(79, 112, 179, 0.08) 55%,
+		transparent 100%
+	);
+}
+
+/* ─── HERO NAME — dramatic superhero entrance ──────────────────────────
+ * Uses Anton italic. Starts invisible + scaled + blurred, then resolves
+ * into a clean bold title when the parent ScrollFade triggers .scroll-visible.
+ */
+.hero-name {
+	font-family: var(--font-anton), Impact, sans-serif;
+	font-style: italic;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: #fff;
+	text-shadow:
+		0 0 20px rgba(191, 57, 31, 0.4),
+		0 2px 4px rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	transform: scale(1.2) translateX(-20px);
+	filter: blur(6px);
+}
+
+/* Trigger the cinematic reveal when the parent ScrollFade becomes visible */
+.scroll-visible .hero-name,
+.scroll-fade-left.scroll-visible .hero-name,
+.scroll-fade-right.scroll-visible .hero-name {
+	animation: hero-name-enter 0.9s 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes hero-name-enter {
+	0% {
+		opacity: 0;
+		transform: scale(1.3) translateX(-30px);
+		filter: blur(8px);
+	}
+	40% {
+		opacity: 1;
+		filter: blur(0);
+	}
+	70% {
+		transform: scale(1.02) translateX(2px);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1) translateX(0);
+		filter: blur(0);
+	}
+}
