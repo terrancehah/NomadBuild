@@ -33,9 +33,16 @@ const anton = Anton({
 // Site-wide metadata for 育人教育学院 (Pusat Tuisyen Moden Maju / Connaught Edu).
 // Chinese is primary because the site targets local CN-speaking parents.
 export const metadata: Metadata = {
+	// metadataBase ensures all relative URLs (images, icons) resolve to absolute
+	// URLs — required by WhatsApp, Facebook, Twitter crawlers for link previews.
+	metadataBase: new URL("https://preview-yuren.vercel.app"),
 	title: {
-		default: "育人教育学院 | 康乐（Connaught）专业补习中心",
+		default: "育人教育学院 | 想进步，补育人！",
 		template: "%s | 育人教育学院",
+	},
+	icons: {
+		icon: "/logo.png",
+		apple: "/logo.png",
 	},
 	description:
 		"育人教育学院 (Pusat Tuisyen Moden Maju) — 自 2008 年扎根于吉隆坡康乐 Taman Connaught，提供小学、初中 PT3、高中 SPM 全科补习。资深教师团队、最新考试格式、定期学习报告，让孩子想进步，补育人！",
@@ -57,7 +64,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		locale: "zh_CN",
-		url: "https://yuren-edu.com",
+		url: "https://preview-yuren.vercel.app",
 		siteName: "育人教育学院",
 		title: "育人教育学院 | 想进步，补育人！",
 		description:
