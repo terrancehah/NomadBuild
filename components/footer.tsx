@@ -61,7 +61,7 @@ export default function Footer() {
 									育人教育学院
 								</span>
 								<span className="block text-xs text-primary-300 tracking-wide">
-									Since 2001 · Connaught Edu
+									Since 2008 · Connaught Edu
 								</span>
 							</div>
 						</div>
@@ -254,7 +254,7 @@ export default function Footer() {
 				{/* 版权栏 */}
 				<div className="border-t border-secondary-400/30 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-gray-500">
 					<p>
-						&copy; 2001 – {new Date().getFullYear()} 育人教育学院
+						&copy; 2008 – {new Date().getFullYear()} 育人教育学院
 						(Pusat Tuisyen Moden Maju). 版权所有。
 					</p>
 					<p className="text-gray-600">

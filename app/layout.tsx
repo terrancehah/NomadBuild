@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 		template: "%s | 育人教育学院",
 	},
 	description:
-		"育人教育学院 (Pusat Tuisyen Moden Maju) — 自 2001 年扎根于吉隆坡康乐 Taman Connaught，提供小学、初中 PT3、高中 SPM 全科补习。资深教师团队、最新考试格式、定期学习报告，让孩子想进步，补育人！",
+		"育人教育学院 (Pusat Tuisyen Moden Maju) — 自 2008 年扎根于吉隆坡康乐 Taman Connaught，提供小学、初中 PT3、高中 SPM 全科补习。资深教师团队、最新考试格式、定期学习报告，让孩子想进步，补育人！",
 	keywords: [
 		"育人教育学院",
 		"康乐补习",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
 		siteName: "育人教育学院",
 		title: "育人教育学院 | 想进步，补育人！",
 		description:
-			"自 2001 年扎根康乐 Taman Connaught 的专业补习中心，提供小学至 SPM 全科补习。",
+			"自 2008 年扎根康乐 Taman Connaught 的专业补习中心，提供小学至 SPM 全科补习。",
 		images: [
 			{
 				url: "/logo.png",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title: "育人教育学院 | 想进步，补育人！",
-		description: "康乐 Taman Connaught 专业补习中心，自 2001 年。",
+		description: "康乐 Taman Connaught 专业补习中心，自 2008 年。",
 		images: ["/logo.png"],
 	},
 };

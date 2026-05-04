@@ -75,7 +75,7 @@ export default function AboutPage() {
 			{/* Hero 横幅 */}
 			<Hero
 				title="关于育人教育学院"
-				subtitle="创立于 2001 年 · 扎根康乐 · 专注学术辅导逾 20 年"
+				subtitle="创立于 2008 年 · 扎根康乐 · 专注学术辅导逾 20 年"
 				backgroundImage="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1920&h=1080&fit=crop"
 				height="medium"
 				ctaText=""
@@ -88,7 +88,7 @@ export default function AboutPage() {
 						<div>
 							<h2 className="mb-6">我们的故事</h2>
 							<p className="text-muted mb-4">
-								育人教育学院（Pusat Tuisyen Moden Maju）于 2001
+								育人教育学院（Pusat Tuisyen Moden Maju）于 2008
 								年在吉隆坡康乐花园创立，
 								秉持"想进步，补育人"的信念，为周边学生提供高质量的课后辅导。
 								从最初仅有数名学生的小课室，逐步发展成为康乐区备受家长信赖的教育品牌。

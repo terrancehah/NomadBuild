@@ -61,7 +61,7 @@ export default function Header() {
 								育人教育学院
 							</span>
 							<span className="hidden sm:block text-[10px] md:text-xs tracking-wider uppercase text-primary-500 dark:text-primary-300 font-semibold">
-								Connaught Edu · Since 2001
+								Connaught Edu · Since 2008
 							</span>
 						</div>
 					</Link>
