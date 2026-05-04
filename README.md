@@ -6,13 +6,13 @@ My attempt at promoting my website building service through outreach (like a one
 
 ## The Story
 
-It started with a simple question: _what if I could make a living building websites for small businesses, from anywhere in the world?_
+I always ask myself: _what if I could make a living from anywhere in the world?_
 
-No agency. No office. Just a laptop, a phone, and the willingness to cold-call business owners who could use a better online presence.
+Just a laptop, and the willingness to promote my website building service through outreach.
 
-This repo is the foundation of that experiment. Rather than starting from scratch every time a new client says yes, I built a reusable template — a full multi-page business website that can be re-skinned, rewritten, and redeployed for any small business in a matter of days. The current version was shaped around a real-world client engagement, but the bones are designed to be swapped out entirely: brand colours, copy, images, page structure — everything is modular and clearly marked for quick customisation.
+This repo is the foundation of that experiment. So I built a reusable template — a full multi-page business website that can be re-skinned, rewritten, and redeployed for any small business in just a matter of days. The current version was shaped around a real-world client engagement, but the pillars of the site are designed to be swapped out entirely: brand colours, copy, images, page structure — everything is modular and clearly marked for quick customisation.
 
-The goal isn't just to build one website. It's to build a system — a repeatable workflow where each new project gets faster, cleaner, and more refined than the last. Every client engagement feeds back into this template, and every improvement here makes the next pitch that much easier to deliver on.
+My goal isn't just to build one website. It's to build a repeatable workflow where each new project gets faster, cleaner, and more refined than the last.
 
 ## What's Inside
 
