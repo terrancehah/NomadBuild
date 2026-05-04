@@ -40,7 +40,7 @@ export default function Header() {
 		// Sticky translucent bar — `backdrop-blur` + 60% bg opacity keeps content
 		// readable while scrolling. Dark variant swaps to gray-900 for contrast.
 		<header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:bg-gray-900/90 dark:supports-[backdrop-filter]:bg-gray-900/70 shadow-sm border-b border-gray-200 dark:border-gray-800 transition-colors duration-400">
-			<nav className="container-custom py-3 md:py-4">
+			<nav className="container-custom px-3 md:px-4 py-3 md:py-4">
 				<div className="flex items-center justify-between gap-4">
 					{/* Brand lockup — circular logo + Chinese name + English subtitle. */}
 					<Link

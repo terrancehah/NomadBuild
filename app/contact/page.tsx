@@ -1,6 +1,7 @@
 "use client";
 
 import Hero from "@/components/hero";
+import GoogleMap from "@/components/google-map";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -150,20 +151,20 @@ export default function ContactPage() {
 										onChange={handleChange}
 										className="input-field">
 										<option value="">请选择主题</option>
-										<option value="一般咨询">
-											一般咨询
+										<option value="小学补习咨询">
+											小学补习咨询（1–6 年级）
 										</option>
-										<option value="课程查询">
-											课程查询
+										<option value="PT3 备考咨询">
+											PT3 备考咨询（Form 1–3）
 										</option>
-										<option value="报名注册">
-											报名注册
+										<option value="SPM 课程咨询">
+											SPM 课程咨询（Form 4–5）
 										</option>
-										<option value="学费与付款">
-											学费与付款
+										<option value="假期密集营咨询">
+											假期密集营咨询
 										</option>
-										<option value="意见反馈">
-											意见反馈
+										<option value="报名与学费查询">
+											报名与学费查询
 										</option>
 										<option value="其他">其他</option>
 									</select>
@@ -259,10 +260,10 @@ export default function ContactPage() {
 											+60 11-2733 390
 										</p>
 										<p className="text-muted text-sm">
-											周一至周五：下午 2 时 – 晚上 9 时
+											周一至周五：上午 8 时 – 下午 7 时
 										</p>
 										<p className="text-muted text-sm">
-											周六：上午 9 时 – 下午 6 时
+											周六：上午 9 时 – 下午 4 时
 										</p>
 									</div>
 								</div>
@@ -326,15 +327,10 @@ export default function ContactPage() {
 								</div>
 							</div>
 
-							{/* 地图占位 */}
+							{/* Google Maps 交互地图 */}
 							<div className="mt-8">
 								<h4 className="font-bold mb-4">位置地图</h4>
-								<div className="w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center transition-colors duration-400">
-									<p className="text-gray-500 dark:text-gray-400">
-										{/* EASY CUSTOMIZATION: 替换为 Google Maps 嵌入代码 */}
-										地图占位 — 请嵌入 Google Maps
-									</p>
-								</div>
+								<GoogleMap />
 							</div>
 						</div>
 					</div>
@@ -358,13 +354,13 @@ export default function ContactPage() {
 									周一至周五
 								</span>
 								<span className="text-muted">
-									下午 2:00 – 晚上 9:00
+									上午 8:00 – 下午 7:00
 								</span>
 							</div>
 							<div className="flex justify-between items-center pb-4 border-b">
 								<span className="font-semibold">周六</span>
 								<span className="text-muted">
-									上午 9:00 – 下午 6:00
+									上午 9:00 – 下午 4:00
 								</span>
 							</div>
 							<div className="flex justify-between items-center pb-4 border-b">

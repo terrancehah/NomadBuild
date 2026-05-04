@@ -45,7 +45,7 @@ export default function AnnouncementCard({
 				<Link
 					href={link}
 					className="inline-flex items-center text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium text-sm group">
-					Read More
+					查看详情
 					<svg
 						className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
 						fill="none"

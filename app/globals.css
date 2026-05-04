@@ -89,7 +89,7 @@
 
 	/* Primary CTA — unchanged in dark mode because brand color stays vivid. */
 	.btn-primary {
-		@apply bg-primary-500 hover:bg-primary-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+		@apply bg-primary-500 hover:bg-primary-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:translate-y-0.5;
 	}
 
 	/* Secondary CTA — outlined; swaps surface to gray-800 in dark mode. */
@@ -99,7 +99,7 @@
 	}
 
 	.btn-accent {
-		@apply bg-[#128C7E] hover:bg-[#075E54] dark:bg-[#25D366] dark:hover:bg-[#128C7E] hover:translate-y-1 shadow-lg hover:shadow-xl text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300;
+		@apply bg-[#128C7E] hover:bg-[#075E54] dark:bg-[#25D366] dark:hover:bg-[#128C7E] hover:translate-y-0.5 shadow-lg hover:shadow-xl text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300;
 	}
 
 	/* Card surface — gray-800 fallback in dark mode keeps elevation readable. */

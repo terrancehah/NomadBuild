@@ -105,10 +105,11 @@ export default function AboutPage() {
 							</p>
 						</div>
 						<div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
-							<img
+							<Image
 								src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&h=600&fit=crop"
 								alt="育人教育学院课堂"
-								className="w-full h-full object-cover"
+								fill
+								className="object-cover"
 							/>
 						</div>
 					</div>

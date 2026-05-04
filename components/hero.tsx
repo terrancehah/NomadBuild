@@ -58,7 +58,7 @@ export default function Hero({
 			</div>
 
 			{/* Scroll Indicator */}
-			<div className="absolute bottom-8 transform -translate-x-1/2 z-10 animate-bounce">
+			<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
 				<svg
 					className="w-6 h-6 text-white"
 					fill="none"
