@@ -65,7 +65,9 @@ export default function TestimonialCarousel() {
 				{/* Embla container — flex row holds all slides side by side */}
 				<div className="flex">
 					{testimonials.map((t, i) => (
-						<div key={i} className="flex-[0_0_100%] min-w-0 px-8 lg:px-5 py-8 items-center my-auto">
+						<div
+							key={i}
+							className="flex-[0_0_100%] min-w-0 px-8 lg:px-5 py-8 items-center my-auto">
 							<div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-xl dark:shadow-black/50 p-8 md:p-12 transition-colors duration-400">
 								{/* Star rating */}
 								<div className="flex justify-center mb-6">
@@ -102,7 +104,7 @@ export default function TestimonialCarousel() {
 			{/* Prev arrow */}
 			<button
 				onClick={scrollPrev}
-				className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 md:-translate-x-12 bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300 group"
+				className="absolute left-2 md:left-0 top-1/2 -translate-y-1/2 md:-translate-x-12 bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300 group"
 				aria-label="上一条">
 				<svg
 					className="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-primary-500"
@@ -121,7 +123,7 @@ export default function TestimonialCarousel() {
 			{/* Next arrow */}
 			<button
 				onClick={scrollNext}
-				className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 md:translate-x-12 bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300 group"
+				className="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 md:translate-x-12 bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300 group"
 				aria-label="下一条">
 				<svg
 					className="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-primary-500"

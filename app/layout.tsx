@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_SC, ZCOOL_KuaiLe, Anton } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -109,6 +110,8 @@ export default function RootLayout({
 					<main className="min-h-screen">{children}</main>
 					<Footer />
 				</ThemeProvider>
+				{/* Vercel Analytics — tracks page views automatically on deploy */}
+				<Analytics />
 			</body>
 		</html>
 	);

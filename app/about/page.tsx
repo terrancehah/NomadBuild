@@ -87,19 +87,19 @@ export default function AboutPage() {
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 						<div>
 							<h2 className="mb-6">我们的故事</h2>
-							<p className="text-muted mb-4">
+							<p className="text-muted mb-4 max-w-[65ch]">
 								育人教育学院（Pusat Tuisyen Moden Maju）于 2008
 								年在吉隆坡康乐花园创立，
 								秉持"想进步，补育人"的信念，为周边学生提供高质量的课后辅导。
 								从最初仅有数名学生的小课室，逐步发展成为康乐区备受家长信赖的教育品牌。
 							</p>
-							<p className="text-muted mb-4">
+							<p className="text-muted mb-4 max-w-[65ch]">
 								超过 20 年来，育人帮助了数千名学生在 UPSR、PT3
 								及 SPM 考试中取得优异成绩，
 								不少学子更凭借出色表现升入顶尖大学。我们的成功建基于系统化教学、
 								经验丰富的全职教师以及对每位学生的真心关怀。
 							</p>
-							<p className="text-muted">
+							<p className="text-muted max-w-[65ch]">
 								时至今日，育人依然与时俱进——紧跟教育部最新考试格式，
 								定期举办考前密集班与假期营，让每一位学生都能得到最合适的学习支持。
 							</p>

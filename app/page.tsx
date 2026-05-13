@@ -100,6 +100,7 @@ export default function Home() {
 				title="想进步，补育人！"
 				subtitle="扎根康乐逾 20 年 · 专业教师团队 · 紧跟最新考试格式 · 定期学习报告"
 				backgroundImage="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1920&h=1080&fit=crop"
+				height="medium"
 			/>
 
 			{/* 育人使命 — 品牌宣言，衔接 Hero 与优势介绍 */}
@@ -112,7 +113,7 @@ export default function Home() {
 						<h2 className="text-white text-3xl md:text-4xl mb-6">
 							教育人品，培育人才
 						</h2>
-						<p className="text-gray-300 text-base md:text-lg leading-relaxed">
+						<p className="text-secondary-200 text-base md:text-lg leading-relaxed">
 							哪怕天下所有人都看不起你的孩子，做父母的都应该眼含热泪地欣赏他，
 							<br className="hidden md:block" />
 							拥抱他，赞美他，为自己创造的生命感到骄傲自豪！
@@ -127,7 +128,7 @@ export default function Home() {
 					<ScrollFade>
 						<div className="max-w-3xl mx-auto text-center mb-12">
 							<h2 className="mb-6">为什么选择育人？</h2>
-							<p className="text-lg text-muted">
+							<p className="text-lg text-muted max-w-[65ch] mx-auto">
 								育人的小班课堂，不只是多学几道题 ——
 								让每一位孩子都在最好的环境中全面成长。
 							</p>
